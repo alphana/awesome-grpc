@@ -12,7 +12,7 @@ type Currency struct {
 
 func (currency Currency) GetRate(ctx context.Context, request *protos.RateRequest) (*protos.RateResponse, error) {
 	currency.logger.Info("Handle GetRate", "base", request.GetBase(), "destination", request.GetDestination())
-	response := protos.RateResponse{Rate: 0.0}
+	response := protos.RateResponse{Rate: 0.1}
 	return &response, nil
 }
 
